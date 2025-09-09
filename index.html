@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Introduction</title>
+    <style>
+        /*VHS THEME*/
+        body {
+            background-color: #000;
+            color: #ff1b1b;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-image: url('background.jpg'); 
+            background-size: cover;                  
+            background-repeat: no-repeat;            
+            background-position: center center;      
+        }
+
+        h1, h2, h3 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+
+        /* Details Section */
+        .details {
+            margin: 20px 0;
+            padding: 15px;
+            border: 2px solid #ff1b1b;
+            background-color: rgba(255, 0, 0, 0.05);
+            text-align: left;
+        }
+
+        .details p {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+        /* Life Motto */
+        .motto {
+            margin: 30px 0;
+            font-size: 1.3em;
+            font-style: italic;
+            border-top: 2px solid #ff1b1b;
+            border-bottom: 2px solid #ff1b1b;
+            padding: 10px;
+        }
+
+        /* College Schedule Table */
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            color: #ff1b1b;
+            font-size: 1em;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ff1b1b;
+        }
+
+        th {
+            background-color: #1a0000;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(255, 0, 0, 0.05);
+        }
+
+        /* Image Gallery */
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .image-gallery img {
+            width: 250px;
+            height: 250px;
+            margin: 5px;
+            border-radius: 8px;
+            border: 3px solid #ff1b1b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Introduction -->
+        <h1>Personal Introduction</h1>
+        <p>Nasywa Zavira Lubis is my name, people call me Nasywa, but my friends call me Vira.  
+        A Computer Science student at the University of Sumatra who is active in various technology projects, organizations, and committee activities.  
+        I also have an interest in video games and anime. Currently, I am developing my own game project, called <b>Lost Child Syndrome</b>.</p>
+
+        <!-- Profile Image -->
+        <div class="image-gallery">
+            <img src="Image/myphoto1.png" alt="Profile Photo 1" class="profile-img" id="img1">
+            <img src="Image/myphoto2.png" alt="Profile Photo 2" class="profile-img" id="img2">
+            <img src="Image/myphoto3.png" alt="Profile Photo 3" class="profile-img" id="img3">
+        </div>
+
+        <!-- Details Section -->
+        <div class="details">
+            <p><b>Full Name:</b> Nasywa Zavira Lubis </p>
+            <p><b>NIM:</b> 241401006 </p>
+            <p><b>KOM:</b> C </p>
+            <p><b>Hobby:</b> Reading, Gaming, Drawing.</p>
+        </div>
+
+        <!-- Life Motto -->
+        <div class="motto">
+            "Cogito, ergo sum. I think, therefore I am."
+        </div>
+
+        <!-- College Schedule -->
+        <h2>College Schedule</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Course</th>
+                    <th>Time</th>
+                    <th>Room</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Literature and Film</td>
+                    <td>10:30 - 12:10</td>
+                    <td>O.103 (FIB)</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>IELTS Preperation</td>
+                    <td>08:20 - 10:00</td>
+                    <td>D.101</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Data Structures</td>
+                    <td>08:00 - 10:30</td>
+                    <td>D. </td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Artificial Intelligence</td>
+                    <td>10:30 - 13:00</td>
+                    <td>D. </td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Web Programming</td>
+                    <td>14:40 - 17:10</td>
+                    <td>D. </td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Database</td>
+                    <td>08:00 - 10:30</td>
+                    <td>D. </td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Digital Entrepreneurship</td>
+                    <td>10:30 - 12:10</td>
+                    <td>D. </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Audio Player-->
+        <div style="margin-top:40px;">
+            <audio controls>
+                <source src="bgm.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+    <script>
+        // Array of image pairs for each slot
+        const images = [
+            ["Image/myphoto1.png", "Image/myphoto1b.png"], 
+            ["Image/myphoto2.png", "Image/myphoto2b.png"], 
+            ["Image/myphoto3.png", "Image/myphoto3b.png"]  
+        ];
+
+        let toggle = false;
+
+        setInterval(() => {
+            toggle = !toggle;
+            for (let i = 0; i < images.length; i++) {
+                document.getElementById(`img${i+1}`).src = images[i][toggle ? 1 : 0];
+            }
+        }, 2000); //perdetik
+    </script>
+</body>
+</html>
